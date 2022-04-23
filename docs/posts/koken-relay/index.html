@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+    <title>工研ブログリレー3日目 :: ボリューム抵抗燃やし太郎のページ</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="R言語で遊んだ" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://ta729ip.dev/posts/koken-relay/" />
+
+
+
+
+<link rel="stylesheet" href="https://ta729ip.dev/assets/style.css">
+
+  <link rel="stylesheet" href="https://ta729ip.dev/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://ta729ip.dev/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://ta729ip.dev/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="ja" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="工研ブログリレー3日目">
+<meta property="og:description" content="R言語で遊んだ" />
+<meta property="og:url" content="https://ta729ip.dev/posts/koken-relay/" />
+<meta property="og:site_name" content="ボリューム抵抗燃やし太郎のページ" />
+
+  
+    <meta property="og:image" content="https://ta729ip.dev/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://ta729ip.dev/">
+  <div class="logo">
+    Terminal
+  </div>
+</a>
+
+    </div>
+    
+  </div>
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://ta729ip.dev/posts/koken-relay/">工研ブログリレー3日目</a></h1>
+  <div class="post-meta">
+    
+    
+    
+  </div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>こんにちは。工学研究部の部室に住んでいる20のta729ipです。</p>
+<p>前日<a href="https://lnln.dev/blog/2022/04/02/%E5%B7%A5%E7%A0%94%E6%96%B0%E6%AD%93%E3%83%96%E3%83%AD%E3%82%B0%E3%83%AA%E3%83%AC%E3%83%BC2022/">2日目の記事</a>はりんりんくんによる、工研で何をしたかのお話でしたね。
+今回は工研ブログリレーの3日目の記事として、R言語で遊んだ話をします。
+2021年は工研の合宿でR言語の講習をして部内でRの面白さを布教しました。
+Rの細かい内容はネットで検索すれば出てくるため、この記事ではどんなことに活用したのかについて書きます。</p>
+<h2 id="グラフ作成">グラフ作成<a href="#グラフ作成" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>私がRを使う最も大きな目的がグラフ作成です。本当はExcelを使えばもっと楽なのでしょうが、あるデータを元に決められたコマンドを打てば同じグラフを得られる再現性の観点や、書式を細かく設定できるという点で良いなと私は思っています(あと使ってるOSがManjaroでExcelを入れられない)。</p>
+<p>以下では実際のグラフ作成の事例を紹介します。</p>
+<h3 id="基礎科学実験ab1年">基礎科学実験(A|B)(1年)<a href="#基礎科学実験ab1年" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>電気通信大学では初年次に実験があり、グラフを描く機会が多かったです。そのため、実験のグラフをRを用いて描くことにより、キレイなグラフをPDF、PNG、SVGなどの幅広いフォーマットで出力でき、レポートに記載することが出来ました。
+また、Rではデータをインポートし、計算してグラフの書式を設定し、グラフを描画して出力するまでの一連の流れをコマンドでできます。そのため、これらのコマンドを保存しておくことで、レポートを閲覧した他者もデータさえあれば全く同じグラフを得ることができます。また、実験科目では場合に酔っては再提出もあるため、再提出時には以前実行したコマンドの一部を改修するだけで訂正が済む場合が多いので、そのような場合にExcelより楽であると感じました。</p>
+<h3 id="数値解析及びプログラミング演習2年前期">数値解析及びプログラミング演習(2年前期)<a href="#数値解析及びプログラミング演習2年前期" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>2年次に上がってもグラフを描く必要のある科目はあります。
+この数値解析及びプログラミング演習(以下数プロと略します)でも、プログラムの実行結果をグラフで図示する必要がありました。
+当時私はRを利用しはじめて1年が経っていたため、より効率の良いグラフ出力のやり方を探していました。</p>
+<p>最終的にたどり着いた方法は、CSV形式のプログラム実行結果をLaTeXの、CSVを取り込むパッケージ(CSVsimple)を用いて表を自動で生成し、Rで出力したグラフ(PDF形式)を取り込むという方法で手間を減らしました。</p>
+<h3 id="アルゴリズムとデータ構造及びプログラミング演習2年後期">アルゴリズムとデータ構造及びプログラミング演習(2年後期)<a href="#アルゴリズムとデータ構造及びプログラミング演習2年後期" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>同じく2年の後期にもグラフを作成する必要がある科目がありました。
+この科目でのグラフ作成は、数プロの際にやった方法と全く同じ手順で効率よくグラフを作成しました。</p>
+<h2 id="お絵描き">お絵描き<a href="#お絵描き" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Rのグラフ描画機能を用いて電気通信大学の校章であるリサジュー図形を描きました。
+電気通信大学のリサジュー図形は、比が5:6と言われており、それを元にリサジュー図形を描いてみました。
+以下のコードでリサジュー図形が出力できます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">100</span>,length<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">cos</span>(<span style="color:#ae81ff">5</span><span style="color:#f92672">*</span>data), <span style="color:#a6e22e">cos</span>(<span style="color:#ae81ff">6</span><span style="color:#f92672">*</span>data))
+</span></span></code></pre></div><h2 id="おわりに">おわりに<a href="#おわりに" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>こんな感じで2年間Rで遊んできましたが、分からない機能の方が多く、これからもっと遊びたいなと思っています。特にグラフ出力関係は奥が深く、低水準描画関数、高水準描画関数の2種類があるらしく、それら2つを組み合わせてより高度なグラフを作ってみたいです。
+新入生の皆さん含め、Rは楽しいし実験で役に立つため、使ってみるのはいかがでしょうか?</p>
+
+      </div></div>
+
+  
+  
+  
+
+  
+  
+
+  
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://ta729ip.dev/assets/main.js"></script>
+<script src="https://ta729ip.dev/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
