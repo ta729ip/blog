@@ -2,14 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>https://ta729ip.dev/posts/</loc>
+    <lastmod>2023-10-01T01:58:25+09:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://ta729ip.dev/tags/</loc>
+    <lastmod>2023-10-01T01:58:25+09:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://ta729ip.dev/posts/hikkoshi/</loc>
+    <lastmod>2023-10-01T01:58:25+09:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://ta729ip.dev/tags/%E3%82%B5%E3%82%A4%E3%83%88%E4%BD%9C%E6%88%90/</loc>
+    <lastmod>2023-10-01T01:58:25+09:00</lastmod>
   </url><url>
-    <loc>/posts/koken-relay/</loc>
+    <loc>https://ta729ip.dev/</loc>
+    <lastmod>2023-10-01T01:58:25+09:00</lastmod>
+  </url><url>
+    <loc>https://ta729ip.dev/tags/r/</loc>
+    <lastmod>2022-04-04T00:06:00+09:00</lastmod>
+  </url><url>
+    <loc>https://ta729ip.dev/tags/%E5%B7%A5%E7%A0%94%E3%83%96%E3%83%AD%E3%82%B0%E3%83%AA%E3%83%AC%E3%83%BC/</loc>
+    <lastmod>2022-04-04T00:06:00+09:00</lastmod>
+  </url><url>
+    <loc>https://ta729ip.dev/posts/koken-relay/</loc>
+    <lastmod>2022-04-04T00:06:00+09:00</lastmod>
+  </url><url>
+    <loc>https://ta729ip.dev/categories/</loc>
+  </url><url>
+    <loc>https://ta729ip.dev/search/</loc>
   </url>
 </urlset>

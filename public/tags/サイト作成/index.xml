@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>ボリューム抵抗燃やし太郎のページ</title>
-    <link>https://ta729ip.dev/</link>
-    <description>Recent content on ボリューム抵抗燃やし太郎のページ</description>
+    <title>サイト作成 on ボリューム抵抗燃やし太郎のページ</title>
+    <link>https://ta729ip.dev/tags/%E3%82%B5%E3%82%A4%E3%83%88%E4%BD%9C%E6%88%90/</link>
+    <description>Recent content in サイト作成 on ボリューム抵抗燃やし太郎のページ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 01 Oct 2023 01:58:25 +0900</lastBuildDate><atom:link href="https://ta729ip.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Oct 2023 01:58:25 +0900</lastBuildDate><atom:link href="https://ta729ip.dev/tags/%E3%82%B5%E3%82%A4%E3%83%88%E4%BD%9C%E6%88%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>サイトドメインとテーマのお引越し</title>
       <link>https://ta729ip.dev/posts/hikkoshi/</link>
@@ -15,16 +15,6 @@
       <guid>https://ta729ip.dev/posts/hikkoshi/</guid>
       <description>お久しぶりです．工研のta729ipです．最後に投稿したのが1年前の新歓時期だったこのブログですが，Google Domainのサ終に伴ってド</description>
     </item>
-    
-    <item>
-      <title>工研ブログリレー3日目</title>
-      <link>https://ta729ip.dev/posts/koken-relay/</link>
-      <pubDate>Mon, 04 Apr 2022 00:06:00 +0900</pubDate>
-      
-      <guid>https://ta729ip.dev/posts/koken-relay/</guid>
-      <description>R言語で遊んだ</description>
-    </item>
-    
     
   </channel>
 </rss>
