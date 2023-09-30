@@ -13,37 +13,6 @@
       
       <guid>https://ta729ip.dev/posts/koken-relay/</guid>
       <description>こんにちは。工学研究部の部室に住んでいる20のta729ipです。 前日2日目の記事はりんりんくんによる、工研で何をしたかのお話でしたね。 4日</description>
-      <content>&lt;p&gt;こんにちは。工学研究部の部室に住んでいる20のta729ipです。&lt;/p&gt;
-&lt;p&gt;前日&lt;a href=&#34;https://lnln.dev/blog/2022/04/02/%E5%B7%A5%E7%A0%94%E6%96%B0%E6%AD%93%E3%83%96%E3%83%AD%E3%82%B0%E3%83%AA%E3%83%AC%E3%83%BC2022/&#34;&gt;2日目の記事&lt;/a&gt;はりんりんくんによる、工研で何をしたかのお話でしたね。
-4日目の記事はあずきバーによる記事で、5日目はごっちが書く予定でしたが、2人とも落としているので次は&lt;a href=&#34;https://mocchan.dev/koken/koken-blog-relay-2022-day6/&#34;&gt;もっちゃんの記事です&lt;/a&gt;。
-今回は工研ブログリレーの3日目の記事として、R言語で遊んだ話をします。
-2021年は工研の合宿でR言語の講習をして部内でRの面白さを布教しました。
-Rの細かい内容はネットで検索すれば出てくるため、この記事ではどんなことに活用したのかについて書きます。&lt;/p&gt;
-&lt;h2 id=&#34;グラフ作成&#34;&gt;グラフ作成&lt;/h2&gt;
-&lt;p&gt;私がRを使う最も大きな目的がグラフ作成です。本当はExcelを使えばもっと楽なのでしょうが、あるデータを元に決められたコマンドを打てば同じグラフを得られる再現性の観点や、書式を細かく設定できるという点で良いなと私は思っています(あと使ってるOSがManjaroでExcelを入れられない)。&lt;/p&gt;
-&lt;p&gt;以下では実際のグラフ作成の事例を紹介します。&lt;/p&gt;
-&lt;h3 id=&#34;基礎科学実験ab1年&#34;&gt;基礎科学実験(A|B)(1年)&lt;/h3&gt;
-&lt;p&gt;電気通信大学では初年次に実験があり、グラフを描く機会が多かったです。そのため、実験のグラフをRを用いて描くことにより、キレイなグラフをPDF、PNG、SVGなどの幅広いフォーマットで出力でき、レポートに記載することが出来ました。
-また、Rではデータをインポートし、計算してグラフの書式を設定し、グラフを描画して出力するまでの一連の流れをコマンドでできます。そのため、これらのコマンドを保存しておくことで、レポートを閲覧した他者もデータさえあれば全く同じグラフを得ることができます。また、実験科目では場合に酔っては再提出もあるため、再提出時には以前実行したコマンドの一部を改修するだけで訂正が済む場合が多いので、そのような場合にExcelより楽であると感じました。&lt;/p&gt;
-&lt;h3 id=&#34;数値解析及びプログラミング演習2年前期&#34;&gt;数値解析及びプログラミング演習(2年前期)&lt;/h3&gt;
-&lt;p&gt;2年次に上がってもグラフを描く必要のある科目はあります。
-この数値解析及びプログラミング演習(以下数プロと略します)でも、プログラムの実行結果をグラフで図示する必要がありました。
-当時私はRを利用しはじめて1年が経っていたため、より効率の良いグラフ出力のやり方を探していました。&lt;/p&gt;
-&lt;p&gt;最終的にたどり着いた方法は、CSV形式のプログラム実行結果をLaTeXの、CSVを取り込むパッケージ(CSVsimple)を用いて表を自動で生成し、Rで出力したグラフ(PDF形式)を取り込むという方法で手間を減らしました。&lt;/p&gt;
-&lt;h3 id=&#34;アルゴリズムとデータ構造及びプログラミング演習2年後期&#34;&gt;アルゴリズムとデータ構造及びプログラミング演習(2年後期)&lt;/h3&gt;
-&lt;p&gt;同じく2年の後期にもグラフを作成する必要がある科目がありました。
-この科目でのグラフ作成は、数プロの際にやった方法と全く同じ手順で効率よくグラフを作成しました。&lt;/p&gt;
-&lt;h2 id=&#34;お絵描き&#34;&gt;お絵描き&lt;/h2&gt;
-&lt;p&gt;Rのグラフ描画機能を用いて電気通信大学の校章であるリサジュー図形を描きました。
-電気通信大学のリサジュー図形は、比が5:6と言われており、それを元にリサジュー図形を描いてみました。
-以下のコードでリサジュー図形が出力できます。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;data &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;seq&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;,length&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;plot&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;cos&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;data), &lt;span style=&#34;color:#a6e22e&#34;&gt;cos&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;data))
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://ta729ip.dev/graph.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
-&lt;p&gt;こんな感じで2年間Rで遊んできましたが、分からない機能の方が多く、これからもっと遊びたいなと思っています。特にグラフ出力関係は奥が深く、低水準描画関数、高水準描画関数の2種類があるらしく、それら2つを組み合わせてより高度なグラフを作ってみたいです。
-新入生の皆さん含め、Rは楽しいし実験で役に立つため、使ってみるのはいかがでしょうか?&lt;/p&gt;
-</content>
     </item>
     
   </channel>

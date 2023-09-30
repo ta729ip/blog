@@ -1,0 +1,13 @@
+# Hugo Site Setting
+baseURL: "https://ta729ip.dev/"
+languageCode: "ja"
+DefaultContentLanguage: "ja"
+paginate: 5
+theme: "PaperMod"
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod
+params:
+  author: "ta729ip"
+  defaultTheme: auto
+

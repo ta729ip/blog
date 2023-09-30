@@ -1,0 +1,60 @@
+theme: "PaperMod"
+baseURL: "https://ta729ip.dev"
+title: "ボリューム抵抗燃やし太郎のページ"
+subtitle: "エンドミルで穴あけ"
+showToc: true
+defaultContentLanguage: "ja"
+TocOpen: true
+languageCode: "ja"
+paginate: 5
+hasCJKLanguage: true
+DateFormat: "2006年1月2日"
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  author: "ta729ip"
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  cover:
+    linkFullImages: true
+menu:
+  main:
+    - identifier: posts
+      name: 投稿一覧
+      url: /posts/
+      weight: 1
+    - identifier: categories
+      name: カテゴリー
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: タグ
+      url: /tags/
+      weight: 20
+    - identifier: search
+      name: 検索
+      url: /search/
+      weight: 24
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+# for search
+# https://fusejs.io/api/options.html
+fuseOpts:
+  isCaseSensitive: false
+  shouldSort: true
+  location: 0
+  distance: 1000
+  threshold: 0.4
+  minMatchCharLength: 0
+  keys: ["title", "tags", "content"]
