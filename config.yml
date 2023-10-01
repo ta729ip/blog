@@ -13,7 +13,7 @@ DateFormat: "2006年1月2日"
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   author: "ta729ip"
-  defaultTheme: auto
+  defaultTheme: light
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
