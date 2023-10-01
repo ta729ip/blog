@@ -2,7 +2,7 @@
 title: "ドイツ語のお勉強"
 date: 2023-10-01T13:57:28+09:00
 tags: ["日記"]
-draft: true
+draft: false
 ---
 
 ## 近況
