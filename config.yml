@@ -42,6 +42,10 @@ menu:
       name: 検索
       url: /search/
       weight: 24
+    - identifier: link
+      name: リンク集
+      url: /link/
+      weight: 30
 outputs:
     home:
         - HTML
