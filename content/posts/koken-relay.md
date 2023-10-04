@@ -2,6 +2,7 @@
 title: "工研ブログリレー3日目"
 description: "R言語で遊んだ"
 date: 2022-04-04T00:06:00+09:00
+lastmod: 2023-10-01T18:06:27+09:00
 tags: ["R", "工研ブログリレー"]
 draft: false
 ---
@@ -46,3 +47,7 @@ plot(cos(5*data), cos(6*data))
 ## おわりに
 こんな感じで2年間Rで遊んできましたが、分からない機能の方が多く、これからもっと遊びたいなと思っています。特にグラフ出力関係は奥が深く、低水準描画関数、高水準描画関数の2種類があるらしく、それら2つを組み合わせてより高度なグラフを作ってみたいです。
 新入生の皆さん含め、Rは楽しいし実験で役に立つため、使ってみるのはいかがでしょうか?
+
+<!-- FC2拍手タグここから -->
+<a href="//clap.fc2.com/post/ta729ip/?url=https%3A%2F%2Fta729ip.dev" target="_blank" title="web拍手 by FC2"><img src="//clap.fc2.com/images/button/green/ta729ip?url=https%3A%2F%2Fta729ip.dev&amp;lang=ja" alt="web拍手 by FC2" style="border:none;" /></a>
+<!-- FC2拍手タグここまで -->

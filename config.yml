@@ -22,18 +22,12 @@ params:
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
-  cover:
-    linkFullImages: true
 menu:
   main:
     - identifier: posts
       name: 投稿一覧
       url: /posts/
       weight: 1
-    - identifier: categories
-      name: カテゴリー
-      url: /categories/
-      weight: 10
     - identifier: tags
       name: タグ
       url: /tags/
@@ -62,3 +56,6 @@ fuseOpts:
   threshold: 0.4
   minMatchCharLength: 0
   keys: ["title", "tags", "content"]
+
+cover:
+    linkFullImages: true

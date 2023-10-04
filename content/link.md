@@ -2,6 +2,10 @@
 title: "リンク集"
 date: 2023-10-01T15:08:04+09:00
 draft: false
+ShowReadingTime: false
+ShowPostNavLinks: false
+ShowWordCount: false
+ShowShareButtons: false
 ---
 
 # 工研関連
